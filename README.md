@@ -34,7 +34,7 @@ The goal of this project was to bypass heavy frameworks and utilize a **pure van
 
 ## 🔗 Live Demo
 
-**[View the Live Site Here]((https://pahblosecurity.netlify.app))** 
+**[View the Live Site Here](https://pahblosecurity.netlify.app)** 
 
 ---
 
