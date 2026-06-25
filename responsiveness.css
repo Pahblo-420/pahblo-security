@@ -1,0 +1,121 @@
+/* ==========================================================================
+   PAHBLO SECURITY - MOBILE RESPONSIVENESS
+   ========================================================================== */
+
+/* --- TABLETS & SMALL LAPTOPS (Max Width: 992px) --- */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    /* Stack the About Section */
+    .about-split {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .about-text h2 {
+        text-align: center !important;
+    }
+}
+
+/* --- SMARTPHONES (Max Width: 768px) --- */
+@media (max-width: 768px) {
+    
+    /* Global Padding Reduction */
+    section {
+        padding: 5rem 5%;
+    }
+
+    /* Navbar & Hamburger Menu */
+    .hamburger {
+        display: block; /* Show the menu icon */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(10, 10, 12, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        /* Hidden by default on mobile */
+        max-height: 0; 
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, border-bottom 0.4s ease;
+    }
+
+    /* Class added by JavaScript to open the menu */
+    .nav-links.nav-active {
+        max-height: 300px;
+        border-bottom: 1px solid var(--accent);
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1.2rem 0;
+        font-size: 1rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+    
+    .logo-icon {
+        font-size: 2rem;
+    }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    /* Services Section */
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 card per row */
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Contact Form */
+    .form-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Footer Alignment */
+    .footer-grid {
+        grid-template-columns: 1fr; /* 1 column per row */
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    /* Center the flex items in the footer for mobile */
+    .footer-item {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}

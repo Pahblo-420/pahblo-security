@@ -67,7 +67,101 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    // Target elements to animate on scroll
+    // Target both standard slide-ups and the new 3D card animations
     const animatedElements = document.querySelectorAll('.slide-up');
     animatedElements.forEach(el => appearanceObserver.observe(el));
 });
+// --- Mobile Hamburger Menu Logic ---
+    const hamburger = document.getElementById('hamburger');
+    const navLinksContainer = document.getElementById('navLinks');
+    const navItems = document.querySelectorAll('.nav-links a');
+
+    // Toggle menu open/close when tapping the icon
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('nav-active');
+            // Change icon from bars to an 'X' when open
+            if (navLinksContainer.classList.contains('nav-active')) {
+                hamburger.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }
+        });
+    }
+
+    // Close the menu automatically when a link is clicked
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinksContainer.classList.remove('nav-active');
+            hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
+    });
+// --- About Section Stagger Animation ---
+    const aboutSection = document.getElementById('about');
+    
+    const aboutObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            // Once the About section comes into view...
+            if (entry.isIntersecting) {
+                // Find all elements with the 'stagger-down' class
+                const staggerElements = entry.target.querySelectorAll('.stagger-down');
+                
+                // Fire them one after the other with a 200ms delay
+                staggerElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('appear');
+                    }, index * 500); 
+                });
+                
+                // Unobserve after playing so it stays put
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.4 }); // CHANGED TO 0.1: Triggers as soon as 10% of the section is visible
+
+    if (aboutSection) {
+        aboutObserver.observe(aboutSection);
+    }
+// --- Services Section Animation Sequence ---
+    const servicesSection = document.getElementById('services');
+    const tacticalRing = document.querySelector('.tactical-ring');
+    const serviceCards = document.querySelectorAll('.card-animate');
+    
+    // We need to track the timers so we can cancel them if the user scrolls away quickly
+    let explosionTimer;
+    let cardTimers = [];
+
+    const servicesObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // 1. Play the ring animation
+                tacticalRing.classList.add('animate-ring');
+
+                // 2. Wait, then show cards
+                explosionTimer = setTimeout(() => {
+                    serviceCards.forEach((card, index) => {
+                        let timer = setTimeout(() => {
+                            card.classList.add('appear');
+                        }, index * 120);
+                        cardTimers.push(timer);
+                    });
+                }, 1800); 
+            } else {
+                // --- THE RESET ---
+                // If the section leaves the viewport, reset everything so it plays again
+
+                // 1. Stop any half-finished timers
+                clearTimeout(explosionTimer);
+                cardTimers.forEach(timer => clearTimeout(timer));
+                cardTimers = [];
+
+                // 2. Strip the animation classes away
+                tacticalRing.classList.remove('animate-ring');
+                serviceCards.forEach(card => card.classList.remove('appear'));
+            }
+        });
+    }, { threshold: 0.2 }); // 0.2 means it triggers when 20% visible
+
+    if (servicesSection) {
+        servicesObserver.observe(servicesSection);
+    }

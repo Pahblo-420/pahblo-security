@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pahblo Armed Security | Elite Protection Services</title>
     <meta name="description" content="Professional armed security, car tracking, and elite protection services based in Phuthaditjhaba, Free State.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.pahblosecurity.co.za/"> <meta property="og:title" content="Pahblo Armed Security | Elite Protection">
+    <meta property="og:description" content="Next-generation tactical security, car tracking, and elite protection services based in Phuthaditjhaba.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.pahblosecurity.co.za/">
+    <meta name="twitter:title" content="Pahblo Armed Security | Elite Protection">
+    <meta name="twitter:description" content="Next-generation tactical security, car tracking, and elite protection services based in Phuthaditjhaba.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsiveness.css">
 </head>
 <body id="home">
 
@@ -14,10 +29,13 @@
         <div class="logo">
             <i class="fa-solid fa-shield-halved logo-icon"></i> PAHBLO SECURITY
         </div>
+        <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -30,38 +48,65 @@
         </div>
     </header>
 
-    <section id="about" class="about">
-        <div class="about-container slide-up">
-            <h2 class="section-title">Who We Are</h2>
-            <div class="about-content">
-                <p>Headquartered at <strong>56 Tosi Street, Phuthaditjhaba, Free State</strong>, Pahblo Security is a premier protection and security firm. Established by local security experts, we pride ourselves on rapid response capabilities, rigorous tactical training, and uncompromising integrity.</p>
-                <p>We believe that safety is a fundamental right. Operating out of our Phuthaditjhaba base, our protective network spans across <strong>Kestell, Harrismith, Bethlehem</strong>, and surrounding communities. Every day, we successfully secure hundreds of homes, businesses, and assets, building long-lasting trust with the people we serve.</p>
+    <section id="services" class="services">
+        <h2 class="section-title slide-up" style="color: var(--accent);">What We Offer</h2>
+        <div class="ring-wrapper">
+            <div class="tactical-ring"></div>
+        </div>
+        <div class="services-grid">
+            <div class="card card-animate">
+                <i class="fa-solid fa-person-military-pointing card-icon"></i>
+                <h3>Armed Protection</h3>
+                <p>Highly trained tactical personnel for high-value asset transit and close protection operations.</p>
+                <span class="price-tag">Starts from R850 / hour</span>
+            </div>
+            <div class="card card-animate">
+                <i class="fa-solid fa-house-lock card-icon"></i>
+                <h3>House Protection</h3>
+                <p>Comprehensive physical security, armed response, and perimeter monitoring for residential estates.</p>
+                <span class="price-tag">Starts from R450 / month</span>
+            </div>
+            <div class="card card-animate">
+                <i class="fa-solid fa-car-on card-icon"></i>
+                <h3>Car Tracking</h3>
+                <p>Advanced GPS telematics, live vehicle monitoring, and rapid vehicular recovery teams.</p>
+                <span class="price-tag">Starts from R150 / month</span>
+            </div>
+            <div class="card card-animate">
+                <i class="fa-solid fa-crosshairs card-icon"></i>
+                <h3>Training Courses</h3>
+                <p>Elite civilian and corporate tactical training, firearm proficiency, and situational awareness courses.</p>
+                <span class="price-tag">Starts from R1,200 / course</span>
+            </div>
+            <div class="card card-animate">
+                <i class="fa-solid fa-people-group card-icon"></i>
+                <h3>Event Security</h3>
+                <p>Crowd control, access management, and rapid-response tactical teams for high-capacity gatherings.</p>
+                <span class="price-tag">Starts from R2,500 / event</span>
+            </div>
+            <div class="card card-animate">
+                <i class="fa-solid fa-user-shield card-icon"></i>
+                <h3>VIP Escorts</h3>
+                <p>Covert and overt executive protection details for high-profile individuals and corporate executives.</p>
+                <span class="price-tag">Starts from R1,500 / day</span>
             </div>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <h2 class="section-title slide-up">Our Capabilities</h2>
-        <div class="services-grid">
-            <div class="card slide-up">
-                <i class="fa-solid fa-person-military-pointing card-icon"></i>
-                <h3>Armed Protection</h3>
-                <p>Highly trained tactical personnel for high-value asset transit and close protection operations.</p>
+    <section id="about" class="about has-bg">
+        <div class="about-split">
+            <div class="about-text">
+                <h2 class="section-title stagger-down" style="color: var(--accent); text-align: left; margin-bottom: 2rem;">Who We Are</h2>
+                
+                <p class="stagger-down">Founded in <strong>2019</strong> by CEO and Managing Director <strong>Paballo D. Lipopo</strong>, Pahblo Security is a premier protection and tactical security firm. Headquartered at <strong>56 Tosi Street, Phuthaditjhaba, Free State</strong>, we are built by local security experts who pride themselves on rapid response capabilities, rigorous tactical training, and uncompromising integrity.</p>
+                
+                <p class="stagger-down">We believe that safety is a fundamental right. Operating out of our Phuthaditjhaba base, our protective network spans across <strong>Kestell, Harrismith, Bethlehem</strong>, and surrounding communities. Today, we proudly boast an active roster of over <strong>1,200 secured clients</strong>, providing absolute peace of mind to private residences, corporate entities, and high-value assets alike.</p>
             </div>
-            <div class="card slide-up">
-                <i class="fa-solid fa-house-lock card-icon"></i>
-                <h3>House Protection</h3>
-                <p>Comprehensive physical security, armed response, and perimeter monitoring for residential estates.</p>
-            </div>
-            <div class="card slide-up">
-                <i class="fa-solid fa-car-on card-icon"></i>
-                <h3>Car Tracking</h3>
-                <p>Advanced GPS telematics, live vehicle monitoring, and rapid vehicular recovery teams.</p>
-            </div>
-            <div class="card slide-up">
-                <i class="fa-solid fa-crosshairs card-icon"></i>
-                <h3>Training Courses</h3>
-                <p>Elite civilian and corporate tactical training, firearm proficiency, and situational awareness courses.</p>
+            
+            <div class="about-visual stagger-down">
+                <div class="image-wrapper">
+                    <img src="./tactical.jpg" alt="Pahblo Tactical Security Team">
+                </div>
             </div>
         </div>
     </section>
@@ -71,7 +116,7 @@
             <h2 class="section-title">Get In Touch</h2>
             <p>Deploy elite security infrastructure today. Fill out the operational request below.</p>
             
-            <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT_ID" method="POST" class="contact-form">
+            <form action="https://formspree.io/f/xaqgeygl" method="POST" class="contact-form">
                 <div class="form-row">
                     <div class="input-group">
                         <input type="text" name="firstName" required placeholder="First Name *">
@@ -95,6 +140,8 @@
                         <option value="House Protection">House Protection</option>
                         <option value="Car Tracking">Car Tracking</option>
                         <option value="Training Courses">Training Courses</option>
+                        <option value="Event Security">Event Security</option>
+                        <option value="VIP Escorts">VIP Escorts</option>
                         <option value="Other">Other Inquiry</option>
                     </select>
                 </div>
@@ -110,28 +157,43 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Headquarters</h4>
-                <p><i class="fa-solid fa-location-dot"></i> 56 Tosi Street<br>Phuthaditjhaba<br>Free State, 9866</p>
+                <div class="footer-item">
+                    <i class="fa-solid fa-location-dot"></i> 
+                    <p>56 Tosi Street<br>Phuthaditjhaba<br>Free State, 9866</p>
+                </div>
             </div>
             <div class="footer-col">
-                <h4>Direct Comms</h4>
-                <p><a href="mailto:pahblo420@gmail.com"><i class="fa-solid fa-envelope"></i> enquiry@pahblosecurity.co.za</a></p>
-                <p><a href="tel:+27603412027"><i class="fa-solid fa-phone"></i> 060 341 2027</a></p>
-                <p><a href="https://wa.me/27603412027"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a></p>
+                <h4>Direct Communications</h4>
+                <div class="footer-item">
+                    <i class="fa-solid fa-envelope"></i> 
+                    <p><a href="mailto:pahblo420@gmail.com">enquiry@pahblosecurity.co.za</a></p>
+                </div>
+                <div class="footer-item">
+                    <i class="fa-solid fa-phone"></i> 
+                    <p><a href="tel:+27603412027">060 341 2027</a></p>
+                </div>
+                <div class="footer-item">
+                    <i class="fa-brands fa-whatsapp"></i> 
+                    <p><a href="https://wa.me/27603412027">WhatsApp Us</a></p>
+                </div>
             </div>
             <div class="footer-col">
-                <h4>Social Network</h4>
+                <h4>Social Networks</h4>
                 <div class="social-icons">
-                    <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Pahblo Armed Security. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a>
+            </div>
         </div>
     </footer>
-
     <a href="#home" id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
