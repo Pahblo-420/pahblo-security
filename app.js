@@ -1,16 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // ==========================================
     // 1. INITIAL PAGE LOAD (HERO)
-    // ==========================================
     const heroContent = document.querySelector('.hero-content');
     if (heroContent) {
         heroContent.classList.add('appear');
     }
 
-    // ==========================================
     // 2. BACK TO TOP BUTTON
-    // ==========================================
     const backToTopBtn = document.getElementById('backToTop');
     if (backToTopBtn) {
         window.addEventListener('scroll', () => {
@@ -22,9 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
     // 3. NAVBAR FLOATING & SCROLLSPY
-    // ==========================================
     const navbar = document.querySelector('.navbar');
     const sections = document.querySelectorAll('#home, #about, #services, #contact');
     const navLinks = document.querySelectorAll('.nav-links a'); // For scrollspy highlighting
@@ -57,9 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
     // 4. MOBILE HAMBURGER MENU
-    // ==========================================
     const hamburger = document.getElementById('hamburger');
     const navLinksContainer = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-links a'); // For clicking links
@@ -84,9 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
     // 5. STANDARD SCROLL ANIMATIONS
-    // ==========================================
     const animationOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
@@ -104,9 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.slide-up');
     animatedElements.forEach(el => appearanceObserver.observe(el));
 
-    // ==========================================
     // 6. ABOUT SECTION (LINE-BY-LINE ANIMATION)
-    // ==========================================
+    
     const aboutSection = document.getElementById('about');
     
     if (aboutSection) {
@@ -127,9 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
         aboutObserver.observe(aboutSection);
     }
 
-    // ==========================================
     // 7. SERVICES SECTION (RING & EXPLOSION)
-    // ==========================================
+    
     const servicesSection = document.getElementById('services');
     const tacticalRing = document.querySelector('.tactical-ring');
     const serviceCards = document.querySelectorAll('.card-animate');
@@ -168,4 +155,4 @@ document.addEventListener('DOMContentLoaded', () => {
         servicesObserver.observe(servicesSection);
     }
 
-}); // <-- Everything is cleanly enclosed before this final bracket
+}); 
